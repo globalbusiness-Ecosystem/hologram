@@ -13,12 +13,9 @@ export const BACKEND_URLS = {
   LOGIN_PREVIEW: '/api/login',
   GET_PRODUCTS: (appId: string) =>
     `${BACKEND_CONFIG.BASE_URL}/v1/apps/${appId}/products`,
-  GET_PAYMENT: (paymentId: string) =>
-    `${BACKEND_CONFIG.BASE_URL}/proxy/v2/payments/${paymentId}`,
-  APPROVE_PAYMENT: (paymentId: string) =>
-    `${BACKEND_CONFIG.BASE_URL}/proxy/v2/payments/${paymentId}/approve`,
-  COMPLETE_PAYMENT: (paymentId: string) =>
-    `${BACKEND_CONFIG.BASE_URL}/proxy/v2/payments/${paymentId}/complete`,
+  GET_PAYMENT: (paymentId: string) => `/api/payments/${paymentId}`,
+  APPROVE_PAYMENT: (paymentId: string) => `/api/payments/${paymentId}/approve`,
+  COMPLETE_PAYMENT: (paymentId: string) => `/api/payments/${paymentId}/complete`,
 } as const;
 
 export const PI_PLATFORM_URLS = {} as const;
